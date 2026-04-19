@@ -1,0 +1,28 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Esfera del reloj (borde rojo) -->
+    <path
+        android:pathData="M54,54 m-22,0 a22,22 0 1,0 44,0 a22,22 0 1,0 -44,0"
+        android:strokeColor="#c0392b"
+        android:strokeWidth="4"
+        android:fillColor="#00000000" />
+    <!-- Manecilla hora (arriba) -->
+    <path
+        android:pathData="M54,54 L54,40"
+        android:strokeColor="#ffffff"
+        android:strokeWidth="3"
+        android:strokeLineCap="round" />
+    <!-- Manecilla minuto (derecha) -->
+    <path
+        android:pathData="M54,54 L65,54"
+        android:strokeColor="#ffffff"
+        android:strokeWidth="3"
+        android:strokeLineCap="round" />
+    <!-- Punto central -->
+    <path
+        android:pathData="M54,54 m-2.5,0 a2.5,2.5 0 1,0 5,0 a2.5,2.5 0 1,0 -5,0"
+        android:fillColor="#ffffff" />
+</vector>
