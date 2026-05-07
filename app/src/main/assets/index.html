@@ -564,10 +564,12 @@ function render() {
       var gN   = ordG[oi2][0];
       var gH   = ordG[oi2][1];
       var gMes = ordG[oi2][2];
+      var gDin = tarifa > 0 ? fmtDin(gH * tarifa) : '';
       htmlG += '<div class="hist-fila">'
         + '<div class="hist-nombre">' + gN + '</div>'
         + '<div class="hist-datos">'
         + '<div class="hist-hrs">' + fmt(gH) + ' hs</div>'
+        + (gDin ? '<div class="proy-din">' + gDin + '</div>' : '')
         + '<div class="hist-meses">' + gMes + (gMes === 1 ? ' mes' : ' meses') + '</div>'
         + '</div></div>';
     }
@@ -697,7 +699,7 @@ function refrescarSug() {
   var datos  = cargar();
   var vis    = {};
   var lista  = [];
-  var claves = Object.keys(datos);
+  var claves = Object.keys(datos).sort().reverse();
   for (var i = 0; i < claves.length; i++) {
     var arr = datos[claves[i]];
     for (var j = 0; j < arr.length; j++) {
